@@ -7,10 +7,9 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/tuo-username/sinergia-generative-tablet)](https://github.com/tuo-username/sinergia-generative-tablet/stargazers)
-[![Discord](https://img.shields.io/discord/your-discord-invite)](https://discord.gg/your-invite)
+[![GitHub Stars](https://img.shields.io/github/stars/Artkill24/sinergia-generative-tablet)](https://github.com/Artkill24/sinergia-generative-tablet/stargazers)
 
-![SinerGia Concept](assets/demos/concept-showcase.gif)
+*Simulatore del tablet generativo simbiotico*
 
 </div>
 
@@ -65,6 +64,14 @@ pip install -r requirements.txt
 Avvia il Simulatore
 bash
 python hardware_simulator/main.py
+Controlli:
+
+1/2/3 - Cambia modalità (Sketch/World/Dialogue)
+
+Click bordi - Azioni contestuali
+
+ESC - Esci
+
 🛠 Sviluppa con Noi
 Struttura del Progetto
 text
@@ -76,7 +83,7 @@ sinergia-generative-tablet/
 ├── docs/                 # Documentazione
 └── assets/               # Risorse multimediali
 Roadmap di Sviluppo
-Fase 1: Prototipo Virtuale (0-3 mesi)
+Fase 1: Prototipo Virtuale (0-3 mesi) - IN CORSO
 
 Fase 2: MVP Funzionale (3-6 mesi)
 
@@ -97,17 +104,11 @@ Push al branch (git push origin feature/AmazingFeature)
 
 Apri una Pull Request
 
-Guide per Contributori
-Come aggiungere una nuova modalità
-
-Sviluppo IA Personal Gemini
-
-Linee guida codice
-
 📜 License
 Distribuito con licenza MIT. Vedi LICENSE per maggiori informazioni.
 
 📞 Contatti
+GitHub Issues: Report bug o feature requests
 
 Twitter: @SinerGia_AI
 
