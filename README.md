@@ -9,6 +9,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![CI Status](https://github.com/Artkill24/sinergia-generative-tablet/actions/workflows/ci.yml/badge.svg)](https://github.com/Artkill24/sinergia-generative-tablet/actions/workflows/ci.yml)
 [![GitHub Stars](https://img.shields.io/github/stars/Artkill24/sinergia-generative-tablet?style=for-the-badge)](https://github.com/Artkill24/sinergia-generative-tablet/stargazers)
 [![Contributors](https://img.shields.io/github/contributors/Artkill24/sinergia-generative-tablet?style=for-the-badge)](https://github.com/Artkill24/sinergia-generative-tablet/graphs/contributors)
 [![Codespaces](https://img.shields.io/badge/Codespaces-Ready-blue?style=for-the-badge&logo=github)](https://codespaces.new/Artkill24/sinergia-generative-tablet)
@@ -24,19 +25,19 @@
 <table>
 <tr>
 <td width="33%" align="center">
-<img src="https://via.placeholder.com/400x300/1e2936/00c8ff?text=Sketch+Mode" alt="Sketch Mode"/>
+<img src="assets/screenshots/sketch_mode.png" alt="Sketch Mode"/>
 <br><b>🎨 Sketch Mode</b><br>
-<em>Disegna → Modello 3D</em>
+<em>Disegna il pensiero, l'IA lo realizza</em>
 </td>
 <td width="33%" align="center">
-<img src="https://via.placeholder.com/400x300/1e2936/9664ff?text=World+Mode" alt="World Mode"/>
+<img src="assets/screenshots/world_mode.png" alt="World Mode"/>
 <br><b>🌍 World Mode</b><br>
-<em>AR Assistito da IA</em>
+<em>Vedi l'invisibile con AR + IA</em>
 </td>
 <td width="33%" align="center">
-<img src="https://via.placeholder.com/400x300/1e2936/ff6496?text=Dialogue+Mode" alt="Dialogue Mode"/>
+<img src="assets/screenshots/dialogue_mode.png" alt="Dialogue Mode"/>
 <br><b>💬 Dialogue Mode</b><br>
-<em>Visualizza il pensiero</em>
+<em>Visualizza il processo mentale</em>
 </td>
 </tr>
 </table>
@@ -98,7 +99,8 @@ Hardware Minimale + Intelligenza Massimale = Potenziale Infinito
 3. Esegui:
 ```bash
    python hardware_simulator/main.py
-Il simulatore si aprirà automaticamente con forwarding delle porte! 🎉
+Il simulatore partirà in modalità headless! Per generare screenshot:
+bashpython generate_screenshots.py
 💻 Setup Locale (Alternativo)
 bash# 1. Clona il repository
 git clone https://github.com/Artkill24/sinergia-generative-tablet.git
@@ -115,7 +117,7 @@ pip install -r requirements.txt
 # 4. Avvia il simulatore
 python hardware_simulator/main.py
 🎮 Controlli Simulatore
-TastoAzione1🎨 Sketch Mode2🌍 World Mode3💬 Dialogue ModeClick Sinistra🔄 Rotazione modalitàClick Destra🎯 Azione contestualeESC❌ Esci
+TastoAzione1🎨 Sketch Mode2🌍 World Mode3💬 Dialogue ModeClick Bordo Sinistro🔄 Rotazione modalitàClick Bordo Destro🎯 Azione contestualeESC❌ Esci
 
 🏗️ Architettura del Progetto
 sinergia-generative-tablet/
@@ -140,6 +142,7 @@ sinergia-generative-tablet/
 ├── 📚 docs/                  # Documentazione
 ├── 🧪 tests/                 # Test suite
 └── 🎨 assets/                # Risorse multimediali
+    └── screenshots/         # Screenshot simulatore
 
 🗺️ Roadmap di Sviluppo
 <details>
@@ -148,6 +151,8 @@ sinergia-generative-tablet/
  Simulatore base PyGame
  Sistema di modalità
  Struttura progetto
+ GitHub Codespaces integration
+ CI/CD pipeline
  Integrazione API Gemini
  Sketch recognition basico
  World Mode simulato
@@ -206,10 +211,10 @@ AreaSkills RichiesteDifficoltà🎨 UI/UX DesignFigma, Design Systems🟢 Easy�
 
 💬 Community
 
-�� Bug? → Apri una Issue
+🐛 Bug? → Apri una Issue
 💡 Idea? → Feature Request
 ❓ Domande? → Discussions
-💬 Chat? → Discord Community (Coming Soon)
+🎓 Nuovo? → First-Time Contributors Guide
 
 
 🏆 Contributors
@@ -221,31 +226,10 @@ Vuoi apparire qui? Contribuisci ora!
 
 📊 Project Stats
 Mostra immagine
-<table>
-<tr>
-<td align="center"><b>⭐ Stars</b><br>🌟</td>
-<td align="center"><b>🔀 Forks</b><br>🍴</td>
-<td align="center"><b>📝 Issues</b><br>🐛</td>
-<td align="center"><b>✅ PRs</b><br>🚀</td>
-</tr>
-</table>
 
 📜 License
 Distribuito con licenza MIT. Vedi LICENSE per dettagli completi.
 TL;DR: Puoi fare tutto quello che vuoi, basta citare il progetto originale! ❤️
-
-🌟 Supporters
-Questo progetto è supportato da:
-<table>
-<tr>
-<td align="center">
-<a href="https://github.com/sponsors/Artkill24">
-<img src="https://via.placeholder.com/100x100/0f1923/00c8ff?text=You" width="100px;" alt=""/>
-<br /><sub><b>Diventa Sponsor</b></sub>
-</a>
-</td>
-</tr>
-</table>
 
 📞 Contatti
 <div align="center">
