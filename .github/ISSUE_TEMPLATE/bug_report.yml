@@ -1,0 +1,135 @@
+name: 🐛 Bug Report
+description: Segnala un bug per aiutarci a migliorare SinerGia
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver preso il tempo di segnalare questo bug! 🙏
+        Più informazioni fornisci, più velocemente potremo risolverlo.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 Descrizione del Bug
+      description: Una descrizione chiara e concisa del problema
+      placeholder: Quando faccio X, succede Y invece di Z...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 🔄 Steps per Riprodurre
+      description: Come possiamo riprodurre il problema?
+      placeholder: |
+        1. Apri il simulatore con '...'
+        2. Clicca su '...'
+        3. Scorri fino a '...'
+        4. Vedi errore
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: ✅ Comportamento Atteso
+      description: Cosa ti aspettavi che succedesse?
+      placeholder: Mi aspettavo che...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: ❌ Comportamento Effettivo
+      description: Cosa è successo invece?
+      placeholder: Invece è successo...
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 📸 Screenshots / Video
+      description: Se applicabile, aggiungi screenshots o video
+      placeholder: Drag and drop immagini qui
+
+  - type: dropdown
+    id: mode
+    attributes:
+      label: 🎯 Modalità
+      description: In quale modalità si verifica il bug?
+      options:
+        - Sketch Mode
+        - World Mode
+        - Dialogue Mode
+        - Tutte le modalità
+        - Non applicabile
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 🏷️ Versione
+      description: Quale versione di SinerGia stai usando?
+      placeholder: es. v0.1.0, main branch, commit abc123
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: 💻 Sistema Operativo
+      description: Su quale sistema operativo si verifica?
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - GitHub Codespaces
+        - Altro
+    validations:
+      required: true
+
+  - type: input
+    id: python
+    attributes:
+      label: 🐍 Versione Python
+      description: Quale versione di Python stai usando?
+      placeholder: es. 3.11.5
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 📋 Logs / Traceback
+      description: Se disponibili, incolla qui i log o il traceback dell'errore
+      render: shell
+      placeholder: |
+        Traceback (most recent call last):
+          File "...", line ..., in ...
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 📚 Contesto Aggiuntivo
+      description: Qualsiasi altra informazione utile
+      placeholder: Questo bug appare solo quando...
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: ✔️ Checklist
+      description: Prima di inviare, assicurati di aver controllato
+      options:
+        - label: Ho cercato nelle issue esistenti per evitare duplicati
+          required: true
+        - label: Ho usato l'ultima versione di SinerGia
+          required: true
+        - label: Ho incluso tutti i dettagli necessari
+          required: true

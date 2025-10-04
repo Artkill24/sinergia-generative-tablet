@@ -1,23 +1,102 @@
 {
-    "name": "SinerGia Development",
-    "image": "mcr.microsoft.com/devcontainers/python:3.11",
+    "name": "SinerGia Development Environment 🧠",
+    "image": "mcr.microsoft.com/devcontainers/python:3.11-bullseye",
+    
     "features": {
         "ghcr.io/devcontainers/features/github-cli:1": {},
-        "ghcr.io/devcontainers-contrib/features/opencv:2": {}
+        "ghcr.io/devcontainers-contrib/features/opencv:2": {},
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "20"
+        },
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "installOhMyZsh": true,
+            "upgradePackages": true
+        }
     },
+    
     "customizations": {
         "vscode": {
             "extensions": [
                 "ms-python.python",
                 "ms-python.vscode-pylance",
+                "ms-python.debugpy",
                 "ms-toolsai.jupyter",
-                "ms-python.debugpy"
+                "ms-python.black-formatter",
+                "ms-toolsai.datawrangler",
+                "github.copilot",
+                "github.vscode-pull-request-github",
+                "eamodio.gitlens",
+                "ms-python.flake8",
+                "ms-python.isort",
+                "charliermarsh.ruff",
+                "streetsidesoftware.code-spell-checker",
+                "gruntfuggly.todo-tree",
+                "usernamehw.errorlens",
+                "PKief.material-icon-theme",
+                "yzhang.markdown-all-in-one",
+                "DavidAnson.vscode-markdownlint"
             ],
+            
             "settings": {
-                "python.defaultInterpreterPath": "/usr/local/bin/python"
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.linting.enabled": true,
+                "python.linting.flake8Enabled": true,
+                "python.formatting.provider": "black",
+                "editor.formatOnSave": true,
+                "editor.codeActionsOnSave": {
+                    "source.organizeImports": "explicit"
+                },
+                "files.autoSave": "afterDelay",
+                "terminal.integrated.defaultProfile.linux": "zsh",
+                "workbench.colorTheme": "Default Dark+",
+                "workbench.iconTheme": "material-icon-theme",
+                "git.autofetch": true,
+                "git.enableSmartCommit": true
             }
         }
     },
-    "postCreateCommand": "pip install -r requirements.txt",
-    "forwardPorts": [8000, 8080]
+    
+    "postCreateCommand": "bash .devcontainer/setup.sh",
+    "postStartCommand": "echo '🧠 SinerGia Development Environment Ready! Run: python hardware_simulator/main.py'",
+    
+    "forwardPorts": [8000, 8080, 5000, 3000],
+    "portsAttributes": {
+        "8000": {
+            "label": "FastAPI Backend",
+            "onAutoForward": "notify"
+        },
+        "8080": {
+            "label": "Web Interface",
+            "onAutoForward": "openPreview"
+        },
+        "5000": {
+            "label": "Development Server",
+            "onAutoForward": "silent"
+        },
+        "3000": {
+            "label": "Frontend Dev",
+            "onAutoForward": "silent"
+        }
+    },
+    
+    "containerEnv": {
+        "PYTHONUNBUFFERED": "1",
+        "DISPLAY": ":0",
+        "SDL_VIDEODRIVER": "dummy"
+    },
+    
+    "mounts": [
+        "source=${localWorkspaceFolder}/.vscode,target=/workspaces/${localWorkspaceFolderBasename}/.vscode,type=bind,consistency=cached"
+    ],
+    
+    "remoteUser": "vscode",
+    
+    "updateContentCommand": "pip install -r requirements.txt",
+    
+    "runArgs": [
+        "--cap-add=SYS_PTRACE",
+        "--security-opt",
+        "seccomp=unconfined"
+    ]
 }

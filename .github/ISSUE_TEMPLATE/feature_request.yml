@@ -1,0 +1,117 @@
+name: 💡 Feature Request
+description: Suggerisci una nuova idea per SinerGia
+title: "[FEATURE] "
+labels: ["enhancement", "needs-discussion"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per contribuire con le tue idee! 🚀
+        Ogni suggerimento ci aiuta a rendere SinerGia migliore.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 🎯 Problema / Bisogno
+      description: Qual è il problema o il bisogno che questa feature risolverebbe?
+      placeholder: Attualmente non è possibile... e questo rende difficile...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 💡 Soluzione Proposta
+      description: Come immagini che questa feature funzioni?
+      placeholder: Sarebbe fantastico se SinerGia potesse...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternative Considerate
+      description: Hai considerato altre soluzioni o workaround?
+      placeholder: Ho pensato anche a... ma preferisco la prima perché...
+
+  - type: dropdown
+    id: mode
+    attributes:
+      label: 🎨 Modalità Interessata
+      description: Questa feature riguarda una modalità specifica?
+      options:
+        - Sketch Mode
+        - World Mode
+        - Dialogue Mode
+        - Tutte le modalità
+        - Nuova modalità
+        - Core / Kernel
+        - UI / UX
+        - Backend / API
+        - Altro
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: ⚡ Priorità (Secondo Te)
+      description: Quanto è importante questa feature?
+      options:
+        - 🔴 Critica - Blocker per l'uso
+        - 🟠 Alta - Molto importante
+        - 🟡 Media - Sarebbe utile
+        - 🟢 Bassa - Nice to have
+    validations:
+      required: true
+
+  - type: textarea
+    id: mockup
+    attributes:
+      label: 🎨 Mockup / Esempi
+      description: Hai schizzi, mockup o esempi da altri progetti?
+      placeholder: Drag and drop immagini o link qui
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: 🔧 Suggerimenti Implementazione
+      description: Se hai idee tecniche su come implementarla
+      placeholder: Potrebbe essere implementata usando... oppure integrando con...
+
+  - type: dropdown
+    id: contribute
+    attributes:
+      label: 🤝 Contribuzione
+      description: Saresti interessato a implementarla tu stesso?
+      options:
+        - ✅ Sì, voglio implementarla!
+        - 🤔 Forse, con un po' di guida
+        - ❌ No, solo suggerimento
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: 📋 Use Cases
+      description: In quali scenari useresti questa feature?
+      placeholder: |
+        1. Quando sto progettando X...
+        2. Quando lavoro su Y...
+        3. Per collaborare con Z...
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: ✔️ Checklist
+      description: Prima di inviare
+      options:
+        - label: Ho cercato nelle issue esistenti
+          required: true
+        - label: Questa feature è in linea con la vision di SinerGia
+          required: true
+        - label: Ho fornito esempi concreti di utilizzo
+          required: true
